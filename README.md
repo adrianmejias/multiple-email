@@ -7,6 +7,9 @@ Example multiple email usage
 ------------
 
 ```html
+<!-- Include jQuery Beforehand -->
+<link href="multiple-email.css" rel="stylesheet">
+<script src="multiple-email.js"></script>
 <input type="email">
 ```
 

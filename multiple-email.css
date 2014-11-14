@@ -22,7 +22,6 @@
 	cursor: pointer;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-	box-shadow: 1px 1px 1px #333;
 }
 .multiple-email-list li:hover {
 	opacity: .85;

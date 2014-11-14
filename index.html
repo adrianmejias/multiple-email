@@ -4,19 +4,30 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Multiple Email</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="multiple-email.css" rel="stylesheet">
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="multiple-email.js"></script>
 	</head>
 	<body>
-		<h1>Multiple Email</h1>
-		<p>
-			Enter your email address followed by comma, space, tab or enter
-		</p>
-		<p>
-			<input type="email" id="multiple-email" name="multiple-email" value="">
-		</p>
+		<div class="container">
+			<div class="row">
+				<h1>Multiple Email</h1>
+				<p class="lead">
+					Enter your email address followed by comma, space, tab or enter
+				</p>
+				<form role="form">
+					<div class="form-group">
+						<label for="multiple-email" class="sr-only">Email Address</label>
+						<input type="email" id="multiple-email" name="multiple-email" class="form-control">
+					</div>
+				</form>
+			</div>
+		</div>
 		<script>
 		$ ( function ( )
 		{

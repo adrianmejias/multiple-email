@@ -4,6 +4,7 @@
 	{
 		var defaults =
 		{
+			populate: [],
 			attr: {},
 			classes: null,
 			complete: null
@@ -120,6 +121,34 @@
 						$ ( '<ul>' ).addClass ( 'multiple-email-list' )
 					)
 				);
+				// pre populate email listing
+				if ( settings.populate.length > 0 )
+				{
+					$ ( settings.populate ).each ( function ( i, email )
+					{
+						// append email to listing
+						$input.next ( ).find ( '.multiple-email-list' ).append (
+							$ ( '<li>' ).text ( email ).click ( function ( e )
+							{
+								$ ( this ).remove ( );
+								// remove from array
+								emails = $.grep ( emails, function ( v )
+								{
+									return v !== email;
+								} );
+							} )
+						);
+						// add to array
+						emails.push ( email );
+					} );
+					// add to original input (comma seperated)
+					input.val ( emails.join ( ',' ) );
+					// custom function
+					if ( settings.complete )
+					{
+						settings.complete ( email, emails );
+					}
+				}
 			}
 		} );
 	}

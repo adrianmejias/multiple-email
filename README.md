@@ -27,12 +27,14 @@ $('input[type=email]').multipleEmail({
 Available options
 ------------
 
+* ``populate``: **array** Custom emails to be placed in email listing.
 * ``attr``: **array** Custom attributes to be placed in cloned input field.
 * ``classes``: **string** Custom classes to be placed in cloned input field.
 * ``complete``: **object** Used as a fallback for server-side.
 
 ```javascript
 $('input[type=email]').multipleEmail({
+  populate: [],
   attr: {},
   classes: null,
   complete: function (){}

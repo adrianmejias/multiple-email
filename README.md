@@ -6,6 +6,8 @@ Enter multiple email address using a single input field.
 Example multiple email usage
 ------------
 
+**Demo:** https://adrianmejias.com/multiple-email
+
 ```html
 <!-- Include jQuery Beforehand -->
 <link href="multiple-email.css" rel="stylesheet">

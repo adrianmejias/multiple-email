@@ -91,13 +91,22 @@
 				$clone = $ ( this ).clone ( );
 				$input.hide ( ).after (
 					$ ( '<div>' ).addClass ( 'multiple-email-container' ).append (
-						$clone.removeAttr ( 'id name' ).attr ( settings.attr ).addClass ( settings.classes ).keyup ( function ( e )
+						$clone.removeAttr ( 'id name' ).attr ( settings.attr ).addClass ( settings.classes ).keydown ( function ( e )
 						{
+							var code = e.keyCode || e.which;
+							// prevent form posting
+							if ( code == 13 )
+							{
+								e.preventDefault ( );
+							}
+						} ).keyup ( function ( e )
+						{
+							var code = e.keyCode || e.which;
 							// space, comma, tab, enter
-							if ( $.inArray ( e.which, [ 32, 188, 9, 13 ] ) != -1 )
+							if ( $.inArray ( code, [ 32, 188, 9, 13 ] ) != -1 )
 							{
 								// get rid of space and comma
-								if ( $.inArray ( e.which, [ 32, 188 ] ) != -1 )
+								if ( $.inArray ( code, [ 32, 188 ] ) != -1 )
 								{
 									$ ( this ).val ( $ ( this ).val ( ).slice ( 0, -1 ) );
 								}

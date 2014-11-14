@@ -1,0 +1,17 @@
+.multiple-email-container {
+	display: inline-block;
+}
+.multiple-email-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	clear: left;
+}
+.multiple-email-list li {
+	float: left;
+	margin-right: 5px;
+	padding: 2px 5px;
+	background-color: #efefef;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Multiple Email</title>
+		<link href="multiple-email.css" rel="stylesheet">
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="multiple-email.js"></script>
+	</head>
+	<body>
+		<h1>Multiple Email</h1>
+		<p>
+			Enter your email address followed by comma, space, tab or enter
+		</p>
+		<p>
+			<input type="email" id="multiple-email" name="multiple-email" value="">
+		</p>
+		<script>
+		$ ( function ( )
+		{
+			$ ( 'input[type=email]' ).multipleEmail ( {
+				attr: {
+					size: 65,
+					placeholder: 'Enter your email address followed by comma, space, tab or enter'
+				}
+			} );
+		} );
+		</script>
+	</body>
+</html>
